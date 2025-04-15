@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book Mood Recommender</title>
+  <style>
+    body {
+      background: url('https://images.unsplash.com/photo-1512820790803-83ca734da794') no-repeat center center fixed;
+      background-size: cover;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px #ccc;
+      width: 400px;
+      text-align: center;
+    }
+    h1 { font-size: 28px; }
+    label, .footer { font-size: 18px; }
+    input[type="text"] {
+      width: 90%; padding: 10px; border-radius: 8px; border: none; margin-bottom: 20px;
+    }
+    input[type="submit"] {
+      background-color: #f4a261; border: none; color: white; padding: 10px 20px;
+      border-radius: 10px; font-size: 16px; cursor: pointer;
+    }
+    input[type="submit"]:hover { background-color: #e76f51; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>📚 How Are You Feeling Today?</h1>
+    <form action="/submit" method="POST">
+      <label for="mood">Enter your mood to get book recommendations:</label>
+      <input type="text" id="mood" name="mood" placeholder="e.g. happy, sad, adventurous..." required>
+      <input type="submit" value="Get Suggestions">
+    </form>
+    <div class="footer">Powered by Mood-Based Book Recommender</div>
+  </div>
+</body>
+</html>
